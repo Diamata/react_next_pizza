@@ -1,0 +1,200 @@
+.container {
+    padding: 50px;
+    display: flex;
+}
+
+.left {
+    flex: 2;
+    margin-right: 50px;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.row:last-child {
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inProgress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: inProgress 1s ease infinite alternate;
+}
+
+.inProgress > .checkedIcon {
+    display: none;
+}
+
+@keyframes inProgress {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.aboutDelivery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.aboutDelivery .checkedIcon, inProgress .checkedIcon {
+    display: none;
+}
+
+.right {
+    flex: 1;
+}
+
+.wrapper {
+    width: 90%;
+    max-height: 300px;
+    background-color: #333;
+    padding: 10px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--whitecolor);
+}
+
+.totalTextTitle {
+    margin-right: 10px;
+}
+
+.button {
+    background-color: var(--whitecolor);
+    height: 30px;
+    color: var(--secondarycolor);
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 1200px) {
+        .trStyle {
+            display: none;
+        }
+
+        .trItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .orderId::before {
+            content: 'Order ID: ';
+            font-weight: 500;
+        }
+
+        .customer::before {
+            content: 'Customer: ';
+            font-weight: 500;
+        }
+
+        .address::before {
+            content: 'Address: ';
+            font-weight: 500;
+        }
+
+        .total::before {
+            content: 'Total: ';
+            font-weight: 500;
+        }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        width: 95%;
+        margin-left: 20px;
+        padding: 10px 20px 20px 20px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .left {
+        margin: 0 10px;
+    }
+
+    .row {
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left {
+        margin: 0;
+    }
+
+    .right {
+        flex: 3;
+    }
+
+    .table {
+        margin-bottom: 30px;
+    }
+
+    .trItem {
+        text-align: center;
+    }
+
+    .row:last-child {
+        margin-top: 40px;
+    }
+
+    .line {
+        width: 100%;
+    }
+
+    .row:last-child {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .done, .inProgress, .aboutDelivery {
+        margin-bottom: 40px;
+    }
+
+    .wrapper {
+        margin: 10px 0;
+    }
+}

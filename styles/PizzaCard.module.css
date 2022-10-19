@@ -1,0 +1,66 @@
+.container {
+    width: 22%;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px #acacac solid;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--secondarycolor);
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.desc {
+    height: 22%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #777;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 33%;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .container {
+        width: 90%;
+        margin: 10px;
+    }
+}
