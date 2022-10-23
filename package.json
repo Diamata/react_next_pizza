@@ -16,13 +16,14 @@
     "yarn": "^1.22.19",
     "react-redux": "^8.0.4",
     "axios": "^1.1.3",
-    "redux": "^4.2.0"
-  },
-  "devDependencies": {
     "@paypal/react-paypal-js": "^7.8.1",
     "@reduxjs/toolkit": "^1.8.5",
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.1",
+    "redux": "^4.2.0",
     "mongoose": "^6.6.5"
+  },
+  "devDependencies": {
+
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1"
   }
 }
