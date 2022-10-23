@@ -1,6 +1,5 @@
 import dbConnect from "../../../util/mongo";
 import Order from "../../../models/Order";
-import Product from "../../../models/Product";
 
 const handler = async (req, res) => {
     const { method, query: {id}} = req;

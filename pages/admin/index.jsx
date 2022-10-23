@@ -30,7 +30,7 @@ const Index = ({orders, products}) => {
             setOrderList([
                 res.data,
                 ...orderList.filter(order => order._id !== id),
-            ])
+            ]);
         } catch(err) {
             console.log(err);
         }
@@ -109,7 +109,7 @@ const Index = ({orders, products}) => {
     );
 };
 
-export const getServerSideProps = async (ctx) => {
+export async function getServerSideProps (ctx)  {
     const myCookie = ctx.req?.cookies || "";
 
     if (myCookie.token !== process.env.TOKEN) {
@@ -127,9 +127,9 @@ export const getServerSideProps = async (ctx) => {
     return {
         props: {
             orders: orderRes.data,
-            products: productRes.data
+            products: productRes.data,
         },
     };
-};
+}
 
 export default Index;

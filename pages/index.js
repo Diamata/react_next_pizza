@@ -26,7 +26,7 @@ export default function Home({pizzaList, admin}) {
   )
 }
 
-export const getServerSideProps = async (ctx) => {
+export async function getServerSideProps (ctx){
     const myCookie = ctx.req?.cookies || "";
     let admin = false;
 

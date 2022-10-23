@@ -13,7 +13,7 @@ if (!MONGODB_URL) {
  * in development. This prevents connections growing exponentially
  * dURLng API Route usage.
  */
-let cached = global.mongoose
+let cached = global.mongoose;
 
 if (!cached) {
     cached = global.mongoose = { conn: null, promise: null }
